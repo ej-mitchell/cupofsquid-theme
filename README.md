@@ -1,6 +1,6 @@
 # Cup of Squid Theme.
 
-For my website: cupofsquid.com
+For my website: [cupofsquid.com](cupofsquid.com)
 
 This is adapted from the [Dawn theme](https://dawn.ghost.io) on Ghost.
 
