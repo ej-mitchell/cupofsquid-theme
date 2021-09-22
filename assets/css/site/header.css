@@ -2,6 +2,7 @@
     display: flex;
     align-items: center;
     height: var(--navbar-height);
+    border-bottom: 1px dotted var(--dark-blue-color);
 }
 
 .header-left,
@@ -28,8 +29,8 @@
 }
 
 .logo-text {
-    color: var(--blue-color);
-    font-size: 1.8rem;
+    color: var(--red-color);
+    font-size: 2.4rem;
     font-weight: 800;
 }
 
@@ -52,6 +53,7 @@
 .menu-item {
     margin: 0 1.5rem;
     font-weight: 700;
+    color: var(--orange-color);
 }
 
 .menu-item[href*="..."],

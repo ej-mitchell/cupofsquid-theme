@@ -1,6 +1,6 @@
 :root {
     --brand-color: #d0ed19;
-    --primary-text-color: #232427;
+    --primary-text-color: #202123;
     --secondary-text-color: #999;
     --white-color: #fff;
     --lighter-gray-color: #f6f6f6;
@@ -10,14 +10,13 @@
     --darker-gray-color: #1a1a1a;
     --black-color: #000;
     --green-color: #09da4f;
-    --orange-color: #050505;
+    --orange-color: #ffc107;
     --red-color: #dc3545;
     --blue-color: #0ea5f5;
     --dark-blue-color: #195dd6;
     --rss-color: #f26522;
     --animation-base: ease-in-out;
-    --font-base: Mulish, -apple-system, BlinkMacSystemFont, Segoe UI, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
-    --font-mono: Menlo, Consolas, Monaco, Liberation Mono, Lucida Console, monospace; /* stylelint-disable-line value-keyword-case */
+    --font-base: Menlo, -apple-system, Courier, Helvetica, Arial, sans-serif; /* stylelint-disable-line value-keyword-case */
     --navbar-height: 80px;
 }
 
@@ -145,7 +144,7 @@ pre {
 }
 
 code {
-    font-family: var(--font-mono);
+    font-family: var(--font-base);
     font-size: 14px;
 }
 
