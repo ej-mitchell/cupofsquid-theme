@@ -165,14 +165,12 @@ function pagination() {
         });
     }
 
-    wrapper.on('append.infiniteScroll', function (
-        event,
-        response,
-        path,
-        items
-    ) {
-        $(items[0]).addClass('feed-paged');
-    });
+    wrapper.on(
+        'append.infiniteScroll',
+        function (event, response, path, items) {
+            $(items[0]).addClass('feed-paged');
+        }
+    );
 }
 
 function video() {
@@ -324,7 +322,10 @@ function search() {
     var searchButton = $('.search-button');
     var searchResult = $('.search-result');
     var popular = $('.popular-wrapper');
-    var includeContent = typeof gh_search_content == 'undefined' || gh_search_content == true ? true : false;
+    var includeContent =
+        typeof gh_search_content == 'undefined' || gh_search_content == true
+            ? true
+            : false;
 
     var url =
         siteUrl +
@@ -349,7 +350,9 @@ function search() {
             localStorage.setItem('dawn_search_index', JSON.stringify(index));
             localStorage.setItem('dawn_search_last', data.posts[0].updated_at);
         } catch (e) {
-            console.error('Your browser local storage is full. Update your search settings following the instruction at https://github.com/TryGhost/Dawn#disable-content-search');
+            console.error(
+                'Your browser local storage is full. Update your search settings following the instruction at https://github.com/TryGhost/Dawn#disable-content-search'
+            );
         }
     }
 
@@ -466,27 +469,14 @@ function theme() {
     }
 
     switch (localStorage.getItem('dawn_theme')) {
-        case 'dark':
-            dark();
-            break;
-        case 'light':
-            light();
-            break;
         default:
-            system();
+            dark();
             break;
     }
 
     toggle.on('click', function (e) {
         e.preventDefault();
-
-        if (!html.hasClass('theme-dark') && !html.hasClass('theme-light')) {
-            dark();
-        } else if (html.hasClass('theme-dark')) {
-            light();
-        } else {
-            system();
-        }
+        dark();
     });
 }
 
